@@ -1478,8 +1478,10 @@ export default function CricketJourneySection() {
   const isHeaderInView = useInView(headerRef, { once: true, margin: "-100px" })
   const [isMob, setIsMob] = useState(false)
   const [inView, setInView] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     setIsMob(isMobile())
 
     const observer = new IntersectionObserver(
