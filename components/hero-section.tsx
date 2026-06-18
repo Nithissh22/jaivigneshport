@@ -546,7 +546,7 @@ export default function HeroSection() {
 
       {/* 3D Canvas - optimized settings */}
       <div className="absolute inset-0 z-0">
-        {mobile ? (
+        {!isLoaded ? null : mobile ? (
           <div className="absolute inset-0 bg-gradient-radial from-green-950/30 via-background to-background">
             <div className="absolute top-1/4 right-1/4 w-48 h-48 rounded-full bg-green-500/5 animate-pulse" />
             <div className="absolute bottom-1/3 left-1/4 w-32 h-32 rounded-full bg-yellow-500/5 animate-pulse" style={{animationDelay:'2s'}} />
