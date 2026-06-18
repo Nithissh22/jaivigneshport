@@ -1,0 +1,60 @@
+import type { Metadata, Viewport } from 'next'
+import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import './globals.css'
+import { ScrollProgress } from '@/components/scroll-progress'
+import { CustomCursor } from '@/components/custom-cursor'
+import { PageTransition } from '@/components/page-transition'
+
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: '--font-inter'
+});
+
+export const metadata: Metadata = {
+  title: 'Jai Vignesh | Student Athlete & Cricketer',
+  description: 'Premium portfolio of Jai Vignesh - Student, Cricketer, Dream Chaser. Discover the journey of a passionate cricket player.',
+  generator: 'v0.app',
+  icons: {
+    icon: [
+      {
+        url: '/icon-light.svg',
+        media: '(prefers-color-scheme: light)',
+        type: 'image/svg+xml',
+      },
+      {
+        url: '/icon-dark.svg',
+        media: '(prefers-color-scheme: dark)',
+        type: 'image/svg+xml',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/icon.svg',
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#0a0a0a',
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="en" className="bg-background scroll-smooth" suppressHydrationWarning>
+      <body className={`${inter.variable} font-sans antialiased bg-background text-foreground custom-cursor`} suppressHydrationWarning>
+        <ScrollProgress />
+        <CustomCursor />
+        <PageTransition>
+          {children}
+        </PageTransition>
+        {process.env.NODE_ENV === 'production' && <Analytics />}
+      </body>
+    </html>
+  )
+}

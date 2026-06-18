@@ -1,0 +1,36 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @media (prefers-color-scheme: light) {
+      .background { fill: #ffffff; }
+      .ball { fill: #DC143C; }
+      .stitch { stroke: #ffffff; }
+      .seam { stroke: #000000; }
+    }
+    @media (prefers-color-scheme: dark) {
+      .background { fill: #000000; }
+      .ball { fill: #FF6B6B; }
+      .stitch { stroke: #000000; }
+      .seam { stroke: #ffffff; }
+    }
+  </style>
+  <rect class="background" width="180" height="180" rx="40" />
+  <g clip-path="url(#clip0_cricket)">
+    <!-- Cricket Ball -->
+    <circle cx="90" cy="90" r="65" class="ball" stroke="#000000" stroke-width="1"/>
+    
+    <!-- Seam stitching (characteristic cricket ball seams) -->
+    <path class="stitch" d="M 50 90 Q 70 80 90 75 Q 110 80 130 90" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path class="stitch" d="M 50 90 Q 70 100 90 105 Q 110 100 130 90" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Small accent lines for detail -->
+    <line x1="50" y1="90" x2="55" y2="85" class="seam" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="50" y1="90" x2="55" y2="95" class="seam" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="130" y1="90" x2="125" y2="85" class="seam" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="130" y1="90" x2="125" y2="95" class="seam" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_cricket">
+      <rect width="180" height="180" rx="40" fill="white" />
+    </clipPath>
+  </defs>
+</svg>
