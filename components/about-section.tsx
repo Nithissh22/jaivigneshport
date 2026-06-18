@@ -64,16 +64,16 @@ const journeyData = [
     color: "#eab308"
   },
   { 
-    year: "2022", 
+    year: "2024", 
     title: "ENGINEERING", 
-    location: "PSG College of Technology",
+    location: "Reva University",
     description: "Electrical & Electronics Engineering. Where science meets sport. Merging intellect with athletic prowess.",
     type: "education",
     icon: "university",
     color: "#22c55e"
   },
   { 
-    year: "2024", 
+    year: "2025", 
     title: "CURRENT ERA", 
     location: "Garden City University",
     description: "BBAB Degree. The present chapter in the Garden City. Still writing the story, still chasing excellence.",
