@@ -8,7 +8,7 @@ import { Shared3DBackground } from "./shared-3d-background"
 const heroStats = [
   { value: 196, label: "Matches Played", suffix: "", icon: "M" },
   { value: 1256, label: "Runs Scored", suffix: "+", icon: "R" },
-  { value: 47, label: "Highest Score", suffix: "", icon: "H" },
+  { value: 181, label: "Highest Score", suffix: "", icon: "H" },
   { value: 28, label: "Average", suffix: ".5", icon: "A" },
   { value: 15, label: "Not Outs", suffix: "", icon: "N" },
 ]
